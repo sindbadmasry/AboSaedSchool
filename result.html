@@ -20,7 +20,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top " style="height: 60px;">
     <div class="container-fluid">
       <a href="index.html"><i class="fa-solid fa-house fa-2x" style="color: #0f4db8;"></i></a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -39,7 +39,7 @@
       </div>
     </div>
   </nav>
-  
+
   <div id="carouselExampleControls" class="d-none carousel slide text-center" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -193,74 +193,207 @@
   </div>
   <main>
     <section class="pt-2 d-flex justify-content-center text-center" style="min-height: 100vh;">
-        <article>
-            <select name="year" id="yNumber" class="form-select text-center ">
-                <option value="year1" >الصف الاول الابتدائي</option>
-                <option value="year2" >الصف الثاني الابتدائي</option>
-                <option value="year3" >الصف الثالث الابتدائي</option>
-                <option value="year4" >الصف الرابع الابتدائي</option>
-                <option value="year5">الصف الخامس الابتدائي</option>
-                <option value="year6">الصف السادس الابتدائي</option>
-            </select>
-            <form class="d-flex m-3">
-              <input class="form-control me-2" type="text" id="search-input" placeholder="رقم الجلوس" aria-label="Search" >
-              <button id="searchButton" class="btn btn-outline-success" type="button">بحث</button>
-            </form>
-            <strong style="display: none;" id="errMessage" >
-                من فضلك قم بادخال البيانات بشكل صحيح 
-            </strong>
-            <table  dir="rtl" id="resultTable2">
-                  <thead>
-                      <tr>
-                        <td colspan="2" >  نتيجة  الطالب </td>
-                      </tr>
-                      <tr>
-                        <td colspan="2" class="v" id="name"> </td>
-                      </tr>
-                  </thead>
-                  <tbody style="height: 50px;">
-                    <tr>
-                      <td>عربي</td>
-                      <td class="v" id="ar"></td>      
-                    </tr>
-                  <tr>
-                    <td>رياضيات</td>
-                    <td class="v" id="math"></td>
-                  </tr>
-                  <tr>
-                    <td>دراسات</td>
-                    <td id="sStudy" class="v"></td>
-                  </tr>
-                  <tr>
-                    <td>انجليزي</td>
-                    <td class="v" id="eng"></td>
-                </tr>
-                <tr>
-                  <td>علوم</td>
-                  <td id="science" class="v"></td>
-                </tr>
-                  <tr>
-                    <td>ن1</td>
-                    <td id="n1" class="v"></td>
-                  </tr>
-                  <tr>
-                    <td>ن2</td>
-                    <td id="n2" class="v"></td>
-                  </tr>
-                  <tr>
-                    <td>الدين</td>
-                    <td id="islam" class="v"></td>
-                  </tr>       
-                  <tr>
-                  </tbody>
-                  <tfoot  >
-                    <td>المجموع</td>
-                    <td id="toltal" class="v"></td>
-                  </tfoot>
-            </table>              
-            </article>
-        </section>
-</main> 
+      <article>
+        <select name="year" id="yNumber" class="form-select text-center ">
+          <option value="year1">الصف الاول الابتدائي</option>
+          <option value="year2">الصف الثاني الابتدائي</option>
+          <option value="year3">الصف الثالث الابتدائي</option>
+          <option value="year4">الصف الرابع الابتدائي</option>
+          <option value="year5">الصف الخامس الابتدائي</option>
+          <option value="year6">الصف السادس الابتدائي</option>
+        </select>
+        <form class="d-flex m-3">
+          <input class="form-control me-2" type="text" id="search-input" placeholder="رقم الجلوس" aria-label="Search">
+          <button id="searchButton" class="btn btn-outline-success" type="button">بحث</button>
+        </form>
+        <strong style="display: none;" id="errMessage">
+          من فضلك قم بادخال البيانات بشكل صحيح
+        </strong>
+        <table class="resultTable2" dir="rtl" id="resultTable123">
+          <thead>
+            <tr>
+              <td colspan="2"> : نتيجة الطالب </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="v" id="name"> </td>
+            </tr>
+          </thead>
+          <tbody style="height: 50px;">
+            <tr>
+              <td>عربي</td>
+              <td class="v" id="ar"></td>
+            </tr>
+            <tr>
+              <td>انجليزي</td>
+              <td class="v" id="eng"></td>
+            </tr>
+            <tr>
+              <td>رياضيات</td>
+              <td class="v" id="math"></td>
+            </tr>
+            <tr>
+              <td>متعدد التخصصات</td>
+              <td id="multi" class="v"></td>
+            </tr>
+            <tr>
+              <td>التربية البدنية</td>
+              <td id="sport" class="v"></td>
+            </tr>
+            <tr>
+              <td>التربية الدينية</td>
+              <td id="islam" class="v"></td>
+            </tr>
+            <tr>
+              <td>الاخلاق والقيم</td>
+              <td id="moral" class="v"></td>
+            </tr>
+            <tr>
+              <td>توكاتسو</td>
+              <td id="tokatso" class="v"></td>
+            </tr>
+            <tr>
+          </tbody>
+          <tfoot>
+            <td>المجموع</td>
+            <td id="total" class="v"></td>
+          </tfoot>
+        </table>
+        <table class="resultTable2" dir="rtl" id="resultTable45">
+          <thead>
+            <tr>
+              <td colspan="4">:: نتيجة الطالب </td>
+            </tr>
+            <tr>
+              <td colspan="4" class="v" id="name"> </td>
+            </tr>
+          </thead>
+          <tbody style="height: 50px;">
+            <tr>
+              <td>عربي</td>
+              <td class="v" id="ar2"></td>
+              <td>رياضيات</td>
+              <td class="v" id="math2"></td>
+            </tr>
+            <tr>
+              <td>دراسات</td>
+              <td id="sStudy2" class="v"></td>
+              <td>علوم</td>
+              <td id="science2" class="v"></td>
+            </tr>
+            <tr>
+              <td>انجليزي</td>
+              <td class="v" id="eng2"></td>
+              <td>ICT</td>
+              <td id="ICT2" class="v"></td>
+            </tr>
+            <tr>
+              <td>المهارات المهنية</td>
+              <td id="skills2" class="v"></td>
+              <td>التربية الدينية</td>
+              <td id="islam2" class="v"></td>
+            </tr>
+            <tr>
+              <td colspan="4" >مجموع الكلي </td>
+            </tr>
+            <tr>
+              <td colspan="4" class="v" id="subtotal2"> </td>
+            </tr>
+            <tr>
+              <td >الفن</td>
+              <td id="art2" class="v"></td>
+              <td>الرياضة</td>
+              <td id="sport2" class="v"></td>
+            </tr>
+            <tr>
+              <td>الموسيقى</td>
+              <td id="music2" class="v"></td>
+              <td>توكاتسو</td>
+              <td id="tokatso2" class="v"></td>
+            </tr>
+            <tr>
+            <td colspan="2">القيم والاخلاق</td>
+            <td colspan="2" id="moral2" class="v"></td>
+          </tr>
+          </tbody>
+          <tfoot>
+            <td colspan="2">المجموع</td>
+            <td id="total2" colspan="2" class="v"></td>
+          </tfoot>
+        </table>
+        <table class="resultTable2" dir="rtl" id="resultTable6">
+          <thead>
+            <tr>
+              <td colspan="2">::: نتيجة الطالب </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="v" id="name3"> </td>
+            </trs>
+          </thead>
+          <tbody style="height: 50px;">
+            <tr>
+              <td>عربي</td>
+              <td class="v" id="ar3"></td>
+            </tr>
+            <tr>
+              <td>رياضيات</td>
+              <td class="v" id="math3"></td>
+            </tr>
+            <tr>
+              <td>دراسات</td>
+              <td id="sStudy3" class="v"></td>
+            </tr>
+            <tr>
+              <td>انجليزي</td>
+              <td class="v" id="eng3"></td>
+            </tr>
+            <tr>
+              <td>علوم</td>
+              <td id="science3" class="v"></td>
+            </tr>
+            <tr>
+              <td>ن1</td>
+              <td id="n13" class="v"></td>
+            </tr>
+            <tr>
+              <td>ن2</td>
+              <td id="n23" class="v"></td>
+            </tr>
+            <tr>
+              <td colspan="2">مجموع المواد الاساسية </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="v" id="subtotal3"> </td>
+            </tr>
+            <tr>
+              <td>الدين</td>
+              <td id="islam3" class="v"></td>
+            </tr>
+            <tr>
+              <td>نشاط رياضي</td>
+              <td id="sport3" class="v"></td>
+            </tr>
+            <tr>
+              <td>مشروعات بحثية</td>
+              <td id="searches3" class="v"></td>
+            </tr>
+            <tr>
+              <td>تربية فنية </td>
+              <td id="art3" class="v"></td>
+            </tr>
+            <tr>
+              <td>حاسب الي </td>
+              <td id="tech3" class="v"></td>
+            </tr>
+            <tr>
+          </tbody>
+          <tfoot>
+            <td>المجموع</td>
+            <td id="total3" class="v"></td>
+          </tfoot>
+        </table>
+      </article>
+    </section>
+  </main>
   <footer class="bg-dark">
     © 2023 <span>abo saed school </span> All Right Reserved
   </footer>
@@ -268,4 +401,5 @@
   <script src="js/all.min.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
